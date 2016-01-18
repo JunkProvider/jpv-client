@@ -59,6 +59,15 @@ module JPV.Collection
 			}
 		}
 		
+		forEach(callback: (value: Value, key: string) => void)
+		{
+			const values = this.values;
+			for (let key in values)
+			{
+				callback(values[key], key);	
+			}
+		}
+		
 		toArray()
 		{
 			const array: Value[] = [];
